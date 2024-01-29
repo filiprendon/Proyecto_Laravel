@@ -7,6 +7,15 @@
     <title>Document</title>
 </head>
 <body>
-    <h3>Hola <?php echo $nombre . ' ' . $apellidos ?></h3>
+    {{-- <h3>Hola <?php echo $nombre . ' ' . $apellidos ?></h3> --}}
+    <h3>Hola {{$nombre . ' ' . $apellidos}}</h3>
+
+    @if ($nombre == 'Filip')
+    {{ 'Eres el mejor' }}
+    @else
+    {{'Tienes que mejorar'}}
+    @endif
+
+    
 </body>
 </html>
