@@ -13,16 +13,18 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+Route::get('/saludo', [App\Http\Controllers\saludoController::class, 'saludo']);
 
-Route::get('/prova/{n1}/{n2}', function($n1, $n2) {
-    return "La suma de los numeros es " . $n1 + $n2;
-})->name('suma');
+// Route::get('/', function () {
+//     return view('index');
+// });
 
-Route::get('/saludo', function(){
-    $data['nombre'] = 'Filip';
-    $data['apellidos'] = 'Rendón Toneva';
-    return view('saludo', $data);
-});
+// Route::get('/prova/{n1}/{n2}', function($n1, $n2) {
+//     return "La suma de los numeros es " . $n1 + $n2;
+// })->name('suma');
+
+// Route::get('/saludo', function(){
+//     $data['nombre'] = 'Filip';
+//     $data['apellidos'] = 'Rendón Toneva';
+//     return view('saludo', $data);
+// });
