@@ -13,7 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/saludo', [App\Http\Controllers\saludoController::class, 'saludo']);
+Route::get('/', [App\Http\Controllers\saludoController::class, 'inicio']);
+Route::post('/saludo', [App\Http\Controllers\saludoController::class, 'saludo']);
 
 // Route::get('/', function () {
 //     return view('index');

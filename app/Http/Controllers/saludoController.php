@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 class saludoController extends Controller
 {
     public function inicio(){
-        return view('welcome');
+        return view('layouts.form');
     }
     public function saludo(){
         return 'Hola me llamo Filip';
