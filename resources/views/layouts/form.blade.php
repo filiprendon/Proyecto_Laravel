@@ -1,7 +1,7 @@
 @extends('layouts.principal')
 
 @section('contenido')
-<form action="{{ action([App\Http\Controller\saludoController::class, 'saludo']) }}" method="POST">
+<form action="{{ action([App\Http\Controllers\saludoController::class, 'saludo']) }}" method="POST">
     @csrf
     <div class="mb-3">
       <label for="nombre" class="form-label">Nombre</label>

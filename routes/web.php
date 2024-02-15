@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\saludoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [App\Http\Controllers\saludoController::class, 'inicio']);
-Route::post('/saludo', [App\Http\Controllers\saludoController::class, 'saludo']);
+Route::post('/saludo', [saludoController::class, 'saludo']);
 
 // Route::get('/', function () {
 //     return view('index');
