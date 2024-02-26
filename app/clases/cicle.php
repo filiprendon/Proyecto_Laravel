@@ -1,5 +1,6 @@
 <?php
-namespace calses;
+
+namespace App\Clases;
 
 Class Cicle{
     private $id;

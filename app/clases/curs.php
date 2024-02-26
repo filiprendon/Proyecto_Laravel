@@ -1,6 +1,6 @@
 <?php
 
-namespace clases;
+namespace App\Clases;
 
 Class Curs{
     private $id;

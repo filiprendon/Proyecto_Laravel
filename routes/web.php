@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\ciclesController;
+use App\Clases\Cicle;
+use App\Clases\Curs;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\saludoController;
 
@@ -34,6 +36,24 @@ Route::get('/', function () {
     return view('index');
 });
 
+Route::get('/cicle', function(){
+    $cicles = [
+        new Cicle(1, 'DAW', 'Desarrollo de aplicacioens web'),
+        new Cicle(2, 'DAM', 'Desarrollo de aplicaciones multiplataforma')
+    ];
+    return view('cicles.index', ['cicles' => $cicles]);
+    
+});
+
+Route::get('/curs', function(){
+    $cursos = [
+        new Curs(1, 'DAW1A', 'Desenvolupament Aplicacions Web de primer matí A', 'DAW'),
+        new Curs(2, 'DAW1B', 'Desenvolupament Aplicacions Web de primer matí B', 'DAW'),
+        new Curs(2, 'DAW2A', 'Desenvolupament Aplicacions Web de segon matí A', 'DAW'),
+        new Curs(3, 'DAM2B', 'Desenvolupament Aplicacions Web de segon matí B', 'DAW')
+    ];
+    return view('curs.index', ['cursos' => $cursos]);
+});
 
 // Route::get('/prova/{n1}/{n2}', function($n1, $n2) {
 //     return "La suma de los numeros es " . $n1 + $n2;

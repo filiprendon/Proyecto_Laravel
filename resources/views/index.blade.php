@@ -1,8 +1,7 @@
 @extends('layouts.principal')
 
-@section('titulo', 'Indice')
+@section('titulo', 'ABP Politécnics')
 
 @section('contenido')
-    <h1>Titulo</h1>
-    <p>Esto es el texto del indice</p>
+<img src="{{ asset('img/logo.png') }}" alt="" height="50px" width="250px">
 @endsection
